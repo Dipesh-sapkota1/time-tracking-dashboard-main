@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="input.css">
+  <script type="module" src="index.js"></script>
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body class="font-rubik bg-accent_blue-900">
+ <main class="flex items-center min-h-screen px-5">
+  <!-- Dashboard Container -->
+  <div class="container  mx-auto grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:max-w-5xl ">
+    <!-- Profile card starts here -->
+    <div class="profile self-start rounded-xl overflow-hidden bg-accent_blue-800 lg:row-span-3">
+      <div class="bg-accent_blue-200 flex sm:items-center  lg:flex lg:flex-col lg:items-start lg:justify-start lg:px-4 lg:pb-10 gap-3 py-4 px-2 rounded-xl">
+        <img class="w-16 sm:w-14 md:mb-2 border-2 rounded-full border-white" src="./assets/image-jeremy.png" alt="image-jeremy">
+       <div>
+        <span class="text-accent_blue-100 text-xs">Report for</span>
+        <h1 class="text-white md:text-3xl">Jeremy Robson</h1>
+       </div>
+      </div>
+      <ul class="my-4 px-4 p-2 pb-5 flex gap-2 justify-evenly lg:flex-col lg:items-start rounded-xl text-accent_blue-200 ">
+        <li class="hover:text-white cursor-pointer " id="daily1">
+          <a href="#" data-time="daily" class="btn">Daily</a>
+        </li>
+        <li class="hover:text-white cursor-pointer " id="weekly" data-time="weekly">
+          <a href="#" data-time="weekly" class="btn active">Weekly</a>
+        </li>
+        <li class="hover:text-white cursor-pointer " id="monthly" data-time="monthly">
+          <a href="#" data-time="monthly" class="btn">Monthly</a>
+        </li>
+      </ul>
+    </div>
+     <!-- Profile card ends here -->
+
+    <!-- Work  -->
+   <div class=" text-white rounded-xl overflow-hidden bg-gradient-to-b to-50% from-red-work from-50% to-accent_blue-800">
+    <div class="image h-10 overflow-hidden">
+      <img class="ml-auto mr-3 -mt-3 object-cover block " src="./assets/icon-work.svg" alt="">
+    </div>
+    <div class="content w-full rounded-xl bg-accent_blue-800 px-5  py-4 hover:bg-accent_blue-400 cursor-pointer">
+      <div class="title flex justify-between  items-center mb-4 text-[18px]">
+        <p class="">work</p>
+        <div class="relative">
+          <img class="absolute top-0 hover:opacity-0 cursor-pointer" src="./assets/icon-ellipsis.svg" alt="">
+          <img src="./assets/icon-ellipsis-hover.svg" alt="">
+        </div>
+      </div>
+      <div class="time flex justify-between items-center md:flex-col md:items-start" data-card="work" id="work">
+        
+      </div>
+    </div>
+   </div>
+
+   
+  <!-- Play  -->
+  <div class=" text-white rounded-xl overflow-hidden bg-gradient-to-b to-50% from-accent_blue-play from-50% to-accent_blue-800">
+    <div class="image h-10 overflow-hidden">
+      <img class="ml-auto mr-3 -mt-3 object-cover block " src="./assets/icon-play.svg" alt="">
+    </div>
+    <div class="content w-full rounded-xl bg-accent_blue-800 px-5  py-4 hover:bg-accent_blue-400 cursor-pointer">
+      <div class="title flex justify-between  items-center mb-4 text-[18px]">
+        <p class="">Play</p>
+        <div class="relative">
+          <img class="absolute top-0 hover:opacity-0 cursor-pointer" src="./assets/icon-ellipsis.svg" alt="">
+          <img src="./assets/icon-ellipsis-hover.svg" alt="">
+        </div>
+      </div>
+      <div class="time flex justify-between items-center md:flex-col md:items-start">
+        
+      </div>
+    </div>
+   </div>
+
+    <!-- Study -->
+   <div class=" text-white rounded-xl overflow-hidden bg-gradient-to-b to-50% from-red-study from-50% to-accent_blue-800">
+    <div class="image h-10 overflow-hidden">
+      <img class="ml-auto mr-3 -mt-3 object-cover block " src="./assets/icon-study.svg" alt="">
+    </div>
+    <div class="content w-full rounded-xl bg-accent_blue-800 px-5  py-4 hover:bg-accent_blue-400 cursor-pointer">
+      <div class="title flex justify-between  items-center mb-4 text-[18px]">
+        <p class="">Study</p>
+        <div class="relative">
+          <img class="absolute top-0 hover:opacity-0 cursor-pointer" src="./assets/icon-ellipsis.svg" alt="">
+          <img src="./assets/icon-ellipsis-hover.svg" alt="">
+        </div>
+      </div>
+      <div class="time flex justify-between items-center md:flex-col md:items-start">
+         
+      </div>
+    </div>
+   </div>
+
+    <!-- Execrise -->
+    <div class="  text-white rounded-xl overflow-hidden bg-gradient-to-b to-50% from-green_exercise from-50% to-accent_blue-800">
+      <div class="image h-10 overflow-hidden">
+        <img class="ml-auto mr-3 -mt-3 object-cover block " src="./assets/icon-exercise.svg" alt="">
+      </div>
+      <div class="content w-full rounded-xl bg-accent_blue-800 px-5  py-4 hover:bg-accent_blue-400 cursor-pointer">
+        <div class="title flex justify-between  items-center mb-4 text-[18px]">
+          <p class="">Execrise</p>
+          <div class="relative">
+            <img class="absolute top-0 hover:opacity-0 cursor-pointer" src="./assets/icon-ellipsis.svg" alt="">
+            <img src="./assets/icon-ellipsis-hover.svg" alt="">
+          </div>
+        </div>
+        <div class="time flex justify-between items-center md:flex-col md:items-start">
+           
+        </div>
+      </div>
+     </div>
+
+      <!-- Social -->
+    <div class=" text-white rounded-xl overflow-hidden bg-gradient-to-b to-50% from-violet_social from-50% to-accent_blue-800">
+      <div class="image h-10 overflow-hidden">
+        <img class="ml-auto mr-3 -mt-3 object-cover block " src="./assets/icon-social.svg" alt="">
+      </div>
+      <div class="content w-full rounded-xl bg-accent_blue-800 px-5  py-4 hover:bg-accent_blue-400 cursor-pointer">
+        <div class="title flex justify-between  items-center mb-4 text-[18px]">
+          <p class="">Social</p>
+          <div class="relative">
+            <img class="absolute top-0 hover:opacity-0 cursor-pointer" src="./assets/icon-ellipsis.svg" alt="">
+            <img src="./assets/icon-ellipsis-hover.svg" alt="">
+          </div>
+        </div>
+        <div class="time flex justify-between items-center md:flex-col md:items-start">
+           
+        </div>
+      </div>
+     </div>
+
+      <!-- Self care -->
+    <div class=" text-white rounded-xl overflow-hidden bg-gradient-to-b to-50% from-orange_care from-50% to-accent_blue-800">
+      <div class="image h-10 overflow-hidden">
+        <img class="ml-auto mr-3 -mt-3 object-cover block " src="./assets/icon-self-care.svg" alt="">
+      </div>
+      <div class="content w-full rounded-xl bg-accent_blue-800 px-5  py-4 hover:bg-accent_blue-400 cursor-pointer">
+        <div class="title flex justify-between  items-center mb-4 text-[18px]">
+          <p class="">Self care</p>
+          <div class="relative">
+            <img class="absolute top-0 hover:opacity-0 cursor-pointer" src="./assets/icon-ellipsis.svg" alt="">
+            <img src="./assets/icon-ellipsis-hover.svg" alt="">
+          </div>
+        </div>
+        <div class="time flex justify-between items-center md:flex-col md:items-start">
+          
+        </div>
+      </div>
+     </div>
+  </div>
+ </main>
+</body>
+</html>
