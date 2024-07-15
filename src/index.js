@@ -1,12 +1,8 @@
 import data from './data.json' assert {type:'json'};
-
-const daily = document.getElementById('daily');
-const weekly = document.getElementById('weekly');
-const monthly = document.getElementById('monthly');
 const cards = document.querySelectorAll('.time');
 const btns = document.querySelectorAll('.btn');
  
- defaultData();
+defaultData();
 
 function updataData(e){
     const type = e.target.dataset.time;
@@ -23,7 +19,6 @@ function defaultData(){
             <p class="text-xs text-accent_blue-100">Last day ${data[index].timeframes.weekly.previous}-hrs</p>`
         });
 }
-
 btns.forEach((btn)=>{
     btn.addEventListener('click',(e)=>{
         removeActiveClasses();
@@ -31,7 +26,6 @@ btns.forEach((btn)=>{
         updataData(e);
     })
 });
-
 function removeActiveClasses() {
     btns.forEach(btn => {
         btn.classList.remove('active');
